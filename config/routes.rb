@@ -1,11 +1,13 @@
 Restaurant::Application.routes.draw do
+  devise_for :customers
+
   resources :articles
 
   resources :orders
 
   resources :customers
 
-  match '/' => 'articles#index'
+  root :to => "articles#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
