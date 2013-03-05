@@ -10,8 +10,13 @@
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <script type="text/javascript">
+      function goFullscreen(id) {
+          document.body.webkitRequestFullScreen();
+      }
+  </script>
 </head>
-<body>
+<body onload="document.body.webkitRequestFullScreen();">
 <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
