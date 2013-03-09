@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'carrierwave'
+gem 'therubyracer'
 
 
 # Gems used only for assets and not required
