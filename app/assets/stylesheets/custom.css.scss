@@ -1,2 +1,58 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
+
+/* ============================= */
+/* = Profilseiten = */
+/* ============================= */
+#authorlist{
+list-style:none;
+}
+#authorlist ul{
+list-style: none;
+width: 200px;
+margin: 0;
+padding: 0;
+display: inline;
+}
+#authorlist li {
+margin: 0 0 5px 0;
+list-style: none;
+height: 90px;
+padding: 15px 0 15px 0;
+border-bottom: 1px solid #ececec;
+display: inline-table;
+width: 49%;
+}
+
+#authorlist img.photo {
+float: left;
+margin: 0 15px 0 0;
+padding: 3px;
+border: 1px solid #ececec;
+}
+
+#authorlist img{
+border-radius: 10px;
+}
+
+#authorlist div.authname {
+margin: 20px 0 0 10px;
+}
+
+#authorlist h3 {
+    clear: none !important;
+}
+
+h3 {
+display: block;
+font-size: 1.17em;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+line-height: 15px;
+}
+p {
+margin: -20px 20px 6px;
+}

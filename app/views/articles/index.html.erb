@@ -2,27 +2,25 @@
 
 <button onclick="goFullscreen('player'); return false">Click Me To Go Fullscreen! (For real)</button>
 
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Desrc</th>
-    <th>Articleid</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @articles.each do |article| %>
-  <tr>
-    <td><%= article.name %></td>
-    <td><%= article.price %></td>
-    <td><%= article.desrc %></td>
-    <td><%= article.articleID %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  
+  <div id="authorlist">
+	<ul>
+		<li>
+			<a href="http://asdf"><img src="http://image.made-in-china.com/2f0j00cMntgesKLaoZ/Hookah-Shisha-CF-034-.jpg" alt="bine" class="photo" width="100" ></a>
+			<div>
+				<a href="http://asdf"><h3><%= article.name %></h3></a>
+				<a href="http://asdf"><h3>Preis: <%= article.price %></h3></a><br>
+				<p><%= article.desrc %></p><br>
+				<a href="http://asdf"><%= link_to 'Show', article %>
+    <%= link_to 'Edit', edit_article_path(article) %>
+    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+			</div>
+		</li>
+	</ul>
+</div>
+		
+  
 <% end %>
 </table>
 

@@ -52,6 +52,30 @@ class OrdersController < ApplicationController
       end
     end
   end
+  
+  # POST /orders
+  # POST /orders.json
+  def getOrder
+    @order = Order.new()
+    @order.comment = "comment"
+    @article = Article.find_by_articleID(1)
+    @order.oderID = 1
+    @order.price = 4
+    @order.tableNumber = 10
+    @order.orderTimeStamp = Time.current
+    
+    respond_to do |format|
+      if (!(@article.blank?))
+        @order.save 
+        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.json { render json: @order, status: :created, location: @order }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @order.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
 
   # PUT /orders/1
   # PUT /orders/1.json

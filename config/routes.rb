@@ -4,6 +4,7 @@ Restaurant::Application.routes.draw do
   resources :articles
 
   resources :orders
+  match '/getOrder' => 'orders#getOrder'
 
   resources :customers
 
